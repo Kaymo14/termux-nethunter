@@ -36,7 +36,7 @@ jobs:
         id: version
         run: |
           echo "::notice::Reading rootfs version from install-nethunter.sh..."
-          version=$(grep -oP 'VERSION_NAME="\K[^"]+' install-nethunter.sh)
+          version=$(grep -oP 'VERSION_NAME=\K[^"]+' install-nethunter.sh)
           echo "version=$version" >> $GITHUB_ENV
           echo "::notice::RootFS Version = '$version'"
 
